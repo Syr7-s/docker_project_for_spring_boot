@@ -3,13 +3,13 @@
 Create image
 
 ```dockerfile
-docker build -f Dockerfile -t docker-project-for-spring-boot
+docker build -f Dockerfile -t docker-project-for-spring-boot .
 ```
 
 Run app with below code
 
 ```dockerfile
-docker run -8085:8085 docker-project-spring-boot
+docker container run --name project -p 8085:8085 docker-project-for-spring-boot
 ```
 
 Url :
