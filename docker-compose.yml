@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  docker-spring:
+    image: docker-project-for-spring-boot
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+    ports:
+      - "8085:8085"
+    networks:
+      - docker-spring
+networks:
+    docker-spring:
+      driver: overlay
+
