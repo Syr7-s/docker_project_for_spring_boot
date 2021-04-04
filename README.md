@@ -12,6 +12,14 @@ Run app with below code
 docker container run --name project -p 8085:8085 docker-project-for-spring-boot
 ```
 
+Also, you can run app with docker stack. But should use docker-compose.yml. 
+
+```dockerfile
+docker stack deploy -c .\docker-compose.yml docker-spring-stack
+```
+
+Note: Before use docker stack you should create a image.
+
 Url :
 
 localhost:8085/swagger-ui/index.html
